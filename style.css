@@ -127,8 +127,8 @@ body {
     margin-top: -5px;
 }
 
-/* Mobile (480px and below) */
-@media (max-width: 480px) {
+/* Mobile (600px and below) */
+@media (max-width: 600px) {
     body {
         background: #810061;
         height: 100vh; /* Ensures that body takes full viewport height */
