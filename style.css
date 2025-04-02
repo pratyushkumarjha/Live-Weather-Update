@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +8,8 @@
 
 body {
     background-image: url(assets/img/pxfuel.jpg);
-    background-size: 100%;
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
     align-items: center; /* Centering the content horizontally */
@@ -21,13 +23,13 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-bottom: 20px; /* Adds some space between the title and the card */
+    margin-bottom: 20px;
 }
 
 .title h1 {
     font-size: 40px;
     color: #ff6fd8;
-    text-shadow: 2px  2px 0 black;
+    text-shadow: 2px 2px 0 black;
 }
 
 .card {
@@ -35,7 +37,6 @@ body {
     max-width: 500px;
     background: linear-gradient(145deg, #ff6fd8, #3813c2);
     color: #fff;
-    margin-top: 20px;
     border-radius: 20px;
     padding: 40px 35px;
     text-align: center;
@@ -54,11 +55,10 @@ body {
 }
 
 .search input {
-    border: 0;
+    border: 1px solid black;
     outline: 0;
     background: #ebfffc;
     color: #555;
-    border:1px solid black;
     padding: 10px 20px;
     height: 50px;
     border-radius: 30px;
@@ -70,19 +70,25 @@ body {
 .search button {
     outline: 0;
     background: #ff6fd8;
-    border:1px solid black;
+    border: 1px solid black;
     border-radius: 50%;
     width: 55px;
     height: 55px;
+    min-width: 55px;
+    min-height: 55px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .search button img {
     width: 30px;
 }
+
 .search button:hover {
     background-color: #fb4ecd;
-}   
+}
 
 .weather-icon {
     width: 100px;
@@ -107,13 +113,12 @@ body {
     justify-content: space-between;
     padding: 0 5px;
     margin-top: 50px;
-    gap: 100px;
+    gap: 5vw;
 }
 
 .col {
     display: flex;
     align-items: center;
-    text-align: left;
 }
 
 .col img {
@@ -127,12 +132,12 @@ body {
     margin-top: -5px;
 }
 
-/* Mobile (600px and below) */
-@media (max-width: 600px) {
+/* Mobile (768px and below) */
+@media (max-width: 768px) {
     body {
-        background: #810061;
-        height: 100vh; /* Ensures that body takes full viewport height */
+        background:#810061;
         padding: 10px;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -140,7 +145,7 @@ body {
     }
 
     .title {
-        margin-bottom: 20px; /* Adds space between the title and the card */
+        margin-bottom: 20px;
     }
 
     .title h1 {
@@ -162,8 +167,14 @@ body {
     .search button {
         width: 50px;
         height: 50px;
+        min-width: 50px;
+        min-height: 50px;
         border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+
     .search button img {
         width: 25px;
     }
@@ -181,10 +192,10 @@ body {
     }
 
     .details {
-        display:flex;
+        display: flex;
         flex-direction: row;
         margin-top: 25px;
-        gap:5vw;
+        gap: 5vw;
     }
 
     .col {
